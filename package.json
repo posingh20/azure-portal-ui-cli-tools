@@ -1,0 +1,32 @@
+{
+  "name": "azure-portal-ui-cli-tools",
+  "version": "1.0.0",
+  "description": "Scaffold Playwright E2E tests for Azure Portal, powered by Copilot CLI skills",
+  "bin": {
+    "azure-portal-ui-cli-tools": "bin/init.js"
+  },
+  "files": [
+    "bin/",
+    "auth.setup.ts",
+    "playwright.config.ts",
+    "tsconfig.json",
+    ".env.example",
+    "tests/",
+    "utils/",
+    ".github/"
+  ],
+  "scripts": {
+    "postinstall": "npx playwright install chromium",
+    "auth": "npx playwright test --project=setup"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@playwright/test": "^1.54.1",
+    "dotenv": "^17.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}

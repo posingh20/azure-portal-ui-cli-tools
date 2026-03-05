@@ -17,7 +17,9 @@
   ],
   "scripts": {
     "postinstall": "npx playwright install chromium",
-    "auth": "npx playwright test --project=setup"
+    "auth": "npx playwright test --project=setup",
+    "test": "npx playwright test --project=chromium --reporter=list --workers=1",
+    "test:headed": "npx playwright test --project=chromium --reporter=list --workers=1 --headed"
   },
   "license": "MIT",
   "dependencies": {
